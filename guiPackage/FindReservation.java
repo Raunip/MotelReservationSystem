@@ -41,7 +41,7 @@ public class FindReservation implements ActionListener
         numLabel.setBounds(10,50,150,25);
         panel.add(numLabel);
 
-        JPasswordField numText = new JPasswordField();
+        JTextField numText = new JTextField();
         numText.setBounds(170,50,140,25);
         panel.add(numText);
 
