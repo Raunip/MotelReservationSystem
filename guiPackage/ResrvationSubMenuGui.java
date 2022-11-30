@@ -2,17 +2,21 @@ package guiPackage;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class ResrvationSubMenuGui {
+public class ResrvationSubMenuGui extends JFrame {
     private static final String make_res = "Make Reservation";
     private static final String find_res = "Find Reservation";
 
     private  static final  String back = "Back";
 
-    public static void main (String[] args){
-        JFrame frame = new JFrame("Reservation Sub Menu");
-        frame.setSize(350, 250);
-        frame.setLayout(null);
+    static JFrame res_sub_menuFrame;
+
+    public ResrvationSubMenuGui(){
+        res_sub_menuFrame = new JFrame("Reservation Sub Menu");
+        res_sub_menuFrame.setSize(350, 250);
+        res_sub_menuFrame.setLayout(null);
 
         JButton make_resButton = new JButton(make_res);
         make_resButton.setBounds(90, 40, 150, 40);
@@ -22,13 +26,29 @@ public class ResrvationSubMenuGui {
 
         JButton back_button = new JButton(back);
         back_button.setBounds(20,150,100,40);
+        back_button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                res_sub_menuFrame.setVisible(false);
+            }
+        });
 
-        frame.add(make_resButton);
-        frame.add(find_resButton);
-        frame.add(back_button);
-        frame.setBackground(new Color(0,119,200));
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        res_sub_menuFrame.add(make_resButton);
+        res_sub_menuFrame.add(find_resButton);
+        res_sub_menuFrame.add(back_button);
+        res_sub_menuFrame.setBackground(new Color(0,119,200));
+        res_sub_menuFrame.setVisible(true);
+        res_sub_menuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    public void actionPerformed(ActionEvent e){
+        if(e.getActionCommand().equals("Back")){
+            res_sub_menuFrame.dispose();
+            MainMenuGui.main_menu_frame.setVisible(true);
+
+        }
     }
 
+    public static void main(String[] args){
+        new ResrvationSubMenuGui();
+    }
 }

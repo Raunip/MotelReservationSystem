@@ -18,10 +18,10 @@ import javax.swing.JTextField;
  *
  * @author sarakhouri
  */
-public class CheckIn implements ActionListener
+public class CheckIn extends JFrame implements ActionListener
 {
 
-    public static void main(String[] args) {
+    public CheckIn() {
 
         //Title for window
         JFrame frame = new JFrame("Check In Submenu");
@@ -51,12 +51,27 @@ public class CheckIn implements ActionListener
 
         JButton button = new JButton("Back");
         button.setBounds(10,120,80,25);
-        button.addActionListener(new CheckIn());
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+            }
+        });
         panel.add(button);
 
         button = new JButton("Check In");
         button.setBounds(190,120,120,25);
-        button.addActionListener(new CheckIn());
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame fr = new JFrame();
+                fr.setSize(100,100);
+                JPanel pnl = new JPanel();
+                JLabel lbl = new JLabel("Check in Successful.");
+                pnl.add(lbl);
+
+            }
+        });
         panel.add(button);
 
         panel.setLayout(null);
@@ -66,7 +81,7 @@ public class CheckIn implements ActionListener
         frame.setVisible(true);
     }
 
-    @Override
+
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet.");
     }

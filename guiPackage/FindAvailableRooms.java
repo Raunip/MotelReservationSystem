@@ -5,19 +5,19 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-//////////////
+
 
 /**
  *
  * @author sarakhouri
  */
-public class FindAvailableRooms implements ActionListener {
+public  class FindAvailableRooms extends JFrame {
 
-    public static void main(String[] args) {
+
+
+    public  FindAvailableRooms()
+        {
+
 
         //Title for window
         JFrame frame = new JFrame("Find Available Rooms Submenu");
@@ -65,12 +65,16 @@ public class FindAvailableRooms implements ActionListener {
 
         JButton button = new JButton("Back");
         button.setBounds(10,150,80,25);
-        button.addActionListener(new FindAvailableRooms());
         panel.add(button);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+            }
+        });
 
         button = new JButton("Find");
         button.setBounds(190,150,120,25);
-        button.addActionListener(new FindAvailableRooms());
         panel.add(button);
 
 
@@ -79,9 +83,5 @@ public class FindAvailableRooms implements ActionListener {
 
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet.");
 
-    }
 }

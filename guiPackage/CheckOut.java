@@ -11,9 +11,9 @@ import java.awt.event.ActionListener;
 //////
 
 
-public class CheckOut implements ActionListener {
+public class CheckOut extends JFrame implements ActionListener {
 
-    public static void main(String[] args) {
+    public CheckOut() {
 
         //Title for window
         JFrame frame = new JFrame("Check Out Submenu");
@@ -50,12 +50,27 @@ public class CheckOut implements ActionListener {
 
         JButton button = new JButton("Back");
         button.setBounds(10,120,80,25);
-        button.addActionListener(new CheckOut());
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+            }
+        });
         panel.add(button);
+
 
         button = new JButton("Check Out");
         button.setBounds(190,120,120,25);
-        button.addActionListener(new CheckOut());
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame fr = new JFrame();
+                fr.setSize(100,100);
+                JPanel pnl = new JPanel();
+                JLabel lbl = new JLabel("Check Out Successful.");
+                pnl.add(lbl);
+            }
+        });
         panel.add(button);
 
         panel.setLayout(null);
@@ -66,7 +81,7 @@ public class CheckOut implements ActionListener {
 
     }
 
-    @Override
+
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet.");
     }

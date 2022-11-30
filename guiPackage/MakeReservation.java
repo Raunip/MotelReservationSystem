@@ -20,7 +20,7 @@ public class MakeReservation implements ActionListener
 {
 
 
-    public static void main(String[] args)
+    public void create_make_res_menu()
     {
         JFrame frame = new JFrame("Make Reservation Submenu");
 
