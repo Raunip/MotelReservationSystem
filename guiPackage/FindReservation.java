@@ -11,10 +11,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class FindReservation implements ActionListener
+public class FindReservation extends JFrame
 {
 
-    public static void main(String[] args) {
+    public FindReservation() {
 
         //Title for window
         JFrame frame;
@@ -47,12 +47,18 @@ public class FindReservation implements ActionListener
 
         JButton button = new JButton("Back");
         button.setBounds(10,80,80,25);
-        button.addActionListener(new FindReservation());
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+            }
+        });
+
         panel.add(button);
 
         button = new JButton("Find");
         button.setBounds(190,80,80,25);
-        button.addActionListener(new FindReservation());
+
         panel.add(button);
 
 
@@ -62,10 +68,6 @@ public class FindReservation implements ActionListener
 
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
 
 

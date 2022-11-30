@@ -16,11 +16,11 @@ import java.awt.event.ActionListener;
  *
  * @author sarakhouri
  */
-public class MakeReservation implements ActionListener
+ public class MakeReservation extends JFrame
 {
 
 
-    public void create_make_res_menu()
+    public MakeReservation()
     {
         JFrame frame = new JFrame("Make Reservation Submenu");
 
@@ -83,21 +83,32 @@ public class MakeReservation implements ActionListener
 
         JButton button = new JButton("Back");
         button.setBounds(10,200,80,25);
-        button.addActionListener(new MakeReservation());
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+            }
+        });
         panel.add(button);
 
         button = new JButton("Reserve");
         button.setBounds(240,200,80,25);
-        button.addActionListener(new MakeReservation());
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame fr = new JFrame();
+                fr.setSize(100,100);
+                JPanel pnl = new JPanel();
+                JLabel lbl = new JLabel("Reservation Successful.");
+                pnl.add(lbl);
+            }
+        });
         panel.add(button);
 
         panel.setBackground(new Color(0, 119, 200));
         frame.setVisible(true);
     }
 
-    //
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+
+
 }

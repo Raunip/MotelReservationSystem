@@ -85,12 +85,10 @@ public class ModifyReservationGui implements ActionListener {
 
         JButton button = new JButton("Back");
         button.setBounds(10,240,80,25);
-        button.addActionListener(new MakeReservation());
         panel.add(button);
 
         button = new JButton("Reserve");
         button.setBounds(240,240,80,25);
-        button.addActionListener(new MakeReservation());
         panel.add(button);
 
         panel.setBackground(new Color(0, 119, 200));

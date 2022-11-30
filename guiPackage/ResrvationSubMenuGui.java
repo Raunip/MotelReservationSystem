@@ -20,9 +20,21 @@ public class ResrvationSubMenuGui extends JFrame {
 
         JButton make_resButton = new JButton(make_res);
         make_resButton.setBounds(90, 40, 150, 40);
+        make_resButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new FindReservation().setVisible(true);
+            }
+        });
 
         JButton find_resButton = new JButton(find_res);
         find_resButton.setBounds(90,100,150,40);
+        find_resButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new FindReservation().setVisible(true);
+            }
+        });
 
         JButton back_button = new JButton(back);
         back_button.setBounds(20,150,100,40);
@@ -40,15 +52,7 @@ public class ResrvationSubMenuGui extends JFrame {
         res_sub_menuFrame.setVisible(true);
         res_sub_menuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-    public void actionPerformed(ActionEvent e){
-        if(e.getActionCommand().equals("Back")){
-            res_sub_menuFrame.dispose();
-            MainMenuGui.main_menu_frame.setVisible(true);
 
-        }
-    }
 
-    public static void main(String[] args){
-        new ResrvationSubMenuGui();
-    }
+
 }
