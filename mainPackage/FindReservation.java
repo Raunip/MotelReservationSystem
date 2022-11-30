@@ -9,8 +9,9 @@ public class FindReservation
         confirmationNum = num;
     }
 
-    public Reservation searchReservation(/* insert appropriate variables */)
+    public int searchReservation(int confirmationNum)
     {
         // insert code here
+        return confirmationNum;
     }
 }
