@@ -57,7 +57,7 @@ public class FindReservation extends JFrame
 
       //RGB code for background
         panel.setLayout(null);
-        frame.setLayout(null);
+
      frame.setVisible(true);
 
 
