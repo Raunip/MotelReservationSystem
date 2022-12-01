@@ -19,10 +19,12 @@ public class FindReservation extends JFrame
 
     public FindReservation()
     {
-     frame.setSize(350,300);
-     frame.getContentPane().setBackground(new Color(0, 119, 200));
+     frame.setSize(350,200);
+     //frame.getContentPane().setBackground(new Color(0, 119, 200));
      frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
      JPanel panel = new JPanel();
+
+
 
      name_label = new JLabel("Name");
      name_label.setBounds(10,20,80,25);
@@ -56,9 +58,11 @@ public class FindReservation extends JFrame
      frame.add(panel);
 
       //RGB code for background
+
         panel.setLayout(null);
 
-     frame.setVisible(true);
+        panel.setBackground(new Color(0, 119, 200));
+        frame.setVisible(true);
 
 
     }

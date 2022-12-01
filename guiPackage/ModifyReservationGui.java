@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class ModifyReservationGui implements ActionListener {
 
 /**
@@ -45,6 +46,7 @@ public class ModifyReservationGui implements ActionListener {
         JLabel check_in_date_label = new JLabel("Check In Date");
         check_in_date_label.setBounds(10,70,170,40);
         panel.add(check_in_date_label);
+
 
         JTextField checkInDateText = new JTextField();
         checkInDateText.setBounds(170, 80, 140, 25);
@@ -108,3 +110,4 @@ public class ModifyReservationGui implements ActionListener {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }
+
