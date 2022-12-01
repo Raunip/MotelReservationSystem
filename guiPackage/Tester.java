@@ -1,6 +1,6 @@
 package guiPackage;
 
-public class Tetser {
+public class Tester {
     public static void main(String[] args ){
         new MainMenuGui();
     }
