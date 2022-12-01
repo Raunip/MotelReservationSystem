@@ -5,8 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static guiPackage.ResrvationSubMenuGui.res_sub_menuFrame;
-
 public class MainMenuGui extends JFrame implements ActionListener {
 
     private static final String reservation = "Reservation";
@@ -19,14 +17,14 @@ public class MainMenuGui extends JFrame implements ActionListener {
     public void addResButton(){
 
         JButton res_button = new JButton(reservation);
-        res_button.setBounds(90, 40, 100, 40);
+        res_button.setBounds(90, 40, 150, 40);
         main_menu_frame.add(res_button);
         res_button.addActionListener(this);
     }
 
     public void addFindRoomsButton(){
         JButton find_roomsButton = new JButton(avail_rooms);
-        find_roomsButton.setBounds(90,100,100,40);
+        find_roomsButton.setBounds(90,100,150,40);
         main_menu_frame.add(find_roomsButton);
         find_roomsButton.addActionListener(this);
     }
@@ -34,7 +32,7 @@ public class MainMenuGui extends JFrame implements ActionListener {
     public void addCheckInButton()
     {
         JButton check_inButton = new JButton(check_in);
-        check_inButton.setBounds(90,160,100,40);
+        check_inButton.setBounds(90,160,150,40);
         main_menu_frame.add(check_inButton);
         check_inButton.addActionListener(this);
     }
@@ -43,7 +41,7 @@ public class MainMenuGui extends JFrame implements ActionListener {
     public void addCheckOutButton()
     {
         JButton check_outButton = new JButton(check_out);
-        check_outButton.setBounds(90,220,100,40);
+        check_outButton.setBounds(90,220,150,40);
         main_menu_frame.add(check_outButton);
         check_outButton.addActionListener(this);
     }
@@ -52,13 +50,16 @@ public class MainMenuGui extends JFrame implements ActionListener {
         main_menu_frame = new JFrame("Main Menu");
         main_menu_frame.setSize(300, 350);
         main_menu_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        main_menu_frame.setBackground(new Color(0, 119, 200));
-        main_menu_frame.setLayout(null);
-        main_menu_frame.setVisible(true);
+
         addResButton();
         addFindRoomsButton();
         addCheckInButton();
         addCheckOutButton();
+
+        main_menu_frame.setLayout(null);
+        main_menu_frame.getContentPane().setBackground(new Color(0, 119, 200));
+        main_menu_frame.setVisible(true);
+
 
     }
     public void actionPerformed(ActionEvent e)
@@ -78,6 +79,8 @@ public class MainMenuGui extends JFrame implements ActionListener {
              new CheckOut().setVisible(true);
         }
     }
+
+
 
 
 }

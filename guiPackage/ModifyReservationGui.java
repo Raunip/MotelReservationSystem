@@ -50,7 +50,7 @@ public class ModifyReservationGui implements ActionListener {
         checkInDateText.setBounds(170, 80, 140, 25);
         panel.add(checkInDateText);
 
-        JLabel check_out_date_label = new JLabel("Check In Date");
+        JLabel check_out_date_label = new JLabel("Check Out Date");
         check_out_date_label.setBounds(10,100,170,40);
         panel.add(check_out_date_label);
 
@@ -91,9 +91,16 @@ public class ModifyReservationGui implements ActionListener {
         button.setBounds(240,240,80,25);
         panel.add(button);
 
+        JButton button1 = new JButton("Calendar");
+        button1.setBounds(310,80,25,30);
+        panel.add(button1);
+
         panel.setBackground(new Color(0, 119, 200));
         frame.setVisible(true);
     }
+
+
+
 
     //
     @Override

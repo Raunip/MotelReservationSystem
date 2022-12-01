@@ -1,6 +1,4 @@
 package mainPackage;
-import java.lang.Math;
-import java.text.SimpleDateFormat;
 
 public class MakeReservation
 {
@@ -93,11 +91,11 @@ public class MakeReservation
 
 
 
-    public void setCheck_out_date(int month,int day,int year) {
+   /* public void setCheck_out_date(int month,int day,int year) {
         MyDate date1 = new MyDate(month,day,year);
         check_out_date = String.valueOf(date1.GetDate());
         System.out.println(check_out_date);
-    }
+    }*/
     public String getCheck_out_date() {
         return check_out_date;
     }

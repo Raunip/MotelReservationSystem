@@ -52,6 +52,7 @@ import java.awt.event.ActionListener;
         checkDatelabel.setBounds(10,70,170,40);
         panel.add(checkDatelabel);
 
+
         JTextField checkDateText = new JTextField();
         checkDateText.setBounds(170, 80, 140, 25);
         panel.add(checkDateText);

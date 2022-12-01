@@ -25,7 +25,7 @@ public class FindReservation extends JFrame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(panel);
 
-        panel.setLayout(null);
+        //panel.setLayout(null);
 
         JLabel namelabel = new JLabel("Name");
         namelabel.setBounds(10,20,80,25);
@@ -47,6 +47,7 @@ public class FindReservation extends JFrame
 
         JButton button = new JButton("Back");
         button.setBounds(10,80,80,25);
+        panel.add(button);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -54,15 +55,13 @@ public class FindReservation extends JFrame
             }
         });
 
-        panel.add(button);
 
         button = new JButton("Find");
         button.setBounds(190,80,80,25);
-
         panel.add(button);
 
-
-        panel.setBackground(new Color(0, 119, 200)); //RGB code for background
+        frame.setLayout(null);
+        frame.getContentPane().setBackground(new Color(0, 119, 200)); //RGB code for background
         frame.setVisible(true);
 
 
