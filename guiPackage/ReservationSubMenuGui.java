@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ResrvationSubMenuGui {
+public class ReservationSubMenuGui {
     private static final String make_res = "Make Reservation";
     private static final String find_res = "Find Reservation";
 
@@ -13,7 +13,7 @@ public class ResrvationSubMenuGui {
 
     public boolean visible;
 
-    public ResrvationSubMenuGui (){
+    public ReservationSubMenuGui (){
         JFrame frame = new JFrame("Reservation Sub Menu");
         frame.setSize(350, 250);
         frame.setLayout(null);

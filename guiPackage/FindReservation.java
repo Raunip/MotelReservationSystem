@@ -1,9 +1,4 @@
 package guiPackage;
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-/////
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,57 +8,64 @@ import java.awt.event.ActionListener;
 
 public class FindReservation extends JFrame
 {
+    JLabel name_label;
+    JLabel conf_num_label;
+    JTextField name_textField;
+    JTextField conf_num_texField;
+    JButton back_button;
+   JButton find_button;
+   JFrame frame = new JFrame("Find Reservation");
 
-    public FindReservation() {
 
-        //Title for window
-        JFrame frame;
-        frame = new JFrame("Find Reservation");
+    public FindReservation()
+    {
+     frame.setSize(350,300);
+     frame.getContentPane().setBackground(new Color(0, 119, 200));
+     frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+     JPanel panel = new JPanel();
 
-        JPanel panel = new JPanel();
-        frame.setSize(350,200); //window size
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(panel);
+     name_label = new JLabel("Name");
+     name_label.setBounds(10,20,80,25);
+     panel.add(name_label);
 
-        //panel.setLayout(null);
+     conf_num_label = new JLabel("Confirmation Number");
+     conf_num_label.setBounds(10,50,150,25);
+     panel.add(conf_num_label);
 
-        JLabel namelabel = new JLabel("Name");
-        namelabel.setBounds(10,20,80,25);
-        panel.add(namelabel);
+     name_textField = new JTextField();
+     name_textField.setBounds(170,20,140,25);
+     panel.add(name_textField);
 
-        //allows user to insert a text
-        JTextField nameText = new JTextField();
-        nameText.setBounds(170,20,140,25);
-        panel.add(nameText);
+     conf_num_texField = new JTextField();
+     conf_num_texField.setBounds(170,50,140,25);
+     panel.add(conf_num_texField);
 
-        //label name asking for the confirmation number
-        JLabel numLabel = new JLabel("Confirmation Number");
-        numLabel.setBounds(10,50,150,25);
-        panel.add(numLabel);
-
-        JTextField numText = new JTextField();
-        numText.setBounds(170,50,140,25);
-        panel.add(numText);
-
-        JButton button = new JButton("Back");
-        button.setBounds(10,80,80,25);
-        panel.add(button);
-        button.addActionListener(new ActionListener() {
+     back_button = new JButton("Back");
+     back_button.setBounds(10,80,80,25);
+     back_button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
             }
         });
+     panel.add(back_button);
 
+     find_button = new JButton("Find");
+     find_button.setBounds(190,80,80,25);
+     panel.add(find_button);
+     frame.add(panel);
 
-        button = new JButton("Find");
-        button.setBounds(190,80,80,25);
-        panel.add(button);
-
+      //RGB code for background
+        panel.setLayout(null);
         frame.setLayout(null);
-        frame.getContentPane().setBackground(new Color(0, 119, 200)); //RGB code for background
-        frame.setVisible(true);
+     frame.setVisible(true);
 
+
+    }
+    public static void  main(String[] args) {
+
+
+       new FindReservation();
 
     }
 

@@ -66,7 +66,7 @@ public class MainMenuGui extends JFrame implements ActionListener {
     {
         if(e.getActionCommand().equals("Reservation")){
             this.setVisible(false); // first frame is still open
-            new ResrvationSubMenuGui().setVisible(true);
+            new ReservationSubMenuGui().setVisible(true);
 
         } else if (e.getActionCommand().equals("Find Available Rooms")) {
              this.setVisible(false);
