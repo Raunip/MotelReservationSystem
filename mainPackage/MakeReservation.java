@@ -1,5 +1,6 @@
 package mainPackage;
 
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class MakeReservation
@@ -10,9 +11,9 @@ public class MakeReservation
     Integer zipcode;
     String payment;
     //String check_in_date;
-    GregorianCalendar check_in_date;
+    MyDate check_in_date;
+    MyDate check_out_date;
     //String check_out_date;
-    GregorianCalendar check_out_date;
     private boolean confAvailability;
     private static final int max = 999999;
 
@@ -28,8 +29,8 @@ public class MakeReservation
         this.payment = payment;
         //this.check_in_date = check_in_date;
         //this.check_out_date = check_out_date;
-        check_in_date = new GregorianCalendar();
-        check_out_date = new GregorianCalendar();
+        check_in_date = new MyDate();
+        check_out_date = new MyDate();
     }
 
 
@@ -87,11 +88,10 @@ public class MakeReservation
 
     public void setCheck_in_date(int month, int day, int year)
     {
-        check_in_date.set(year, month, day);
+        check_in_date.SetDate(month, day, year);
     }
 
-    //public String getCheck_in_date()
-    public GregorianCalendar getCheck_in_date()
+    public MyDate getCheck_in_date()
     {
         return check_in_date;
     }
@@ -103,10 +103,10 @@ public class MakeReservation
 //        MyDate date1 = new MyDate(month,day,year);
 //        check_out_date = String.valueOf(date1.GetDate());
 //        System.out.println(check_out_date);
-        check_out_date.set(year, month, day);
+        check_out_date.SetDate(month, day, year);
     }
     //public String getCheck_out_date()
-    public GregorianCalendar getCheck_out_date()
+    public MyDate getCheck_out_date()
     {
         return check_out_date;
     }
@@ -123,11 +123,7 @@ public class MakeReservation
 
     public static void main(String[] args)
     {
-        MakeReservation r = new MakeReservation("Raunip","Patel","28555 Boyds Chaple Rd,",35620,"CASH");
-        r.setConfNUm();
-        r.setCheck_out_date(12,02,2022);
 
-        r.getCheck_out_date();
     }
 
 }

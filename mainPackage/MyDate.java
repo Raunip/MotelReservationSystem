@@ -10,6 +10,11 @@ public class MyDate
     private int Year;
 
 
+    public MyDate()
+    {
+
+    }
+
     public MyDate(int month, int day, int year) {
         Month = month;
         Day = day;
