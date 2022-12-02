@@ -1,6 +1,6 @@
 package mainPackage;
 
-import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class MakeReservation
@@ -10,10 +10,10 @@ public class MakeReservation
     String address;
     Integer zipcode;
     String payment;
-    //String check_in_date;
-    MyDate check_in_date;
-    MyDate check_out_date;
-    //String check_out_date;
+    String check_in_date;
+    //GregorianCalendar check_in_date;
+    String check_out_date;
+   // GregorianCalendar check_out_date;
     private boolean confAvailability;
     private static final int max = 999999;
 
@@ -29,8 +29,7 @@ public class MakeReservation
         this.payment = payment;
         //this.check_in_date = check_in_date;
         //this.check_out_date = check_out_date;
-        check_in_date = new MyDate();
-        check_out_date = new MyDate();
+
     }
 
 
@@ -88,33 +87,34 @@ public class MakeReservation
 
     public void setCheck_in_date(int month, int day, int year)
     {
-        check_in_date.SetDate(month, day, year);
+        MyDate d = new MyDate(month,day,year);
+        check_in_date = d.GetMonth()+"/"+d.GetDay()+"/"+d.GetYear();
     }
 
-    public MyDate getCheck_in_date()
+    //public String getCheck_in_date()
+    public  String getCheck_in_date()
     {
-        return check_in_date;
+      return check_in_date;
     }
 
 
 
     public void setCheck_out_date(int month,int day,int year)
     {
-//        MyDate date1 = new MyDate(month,day,year);
-//        check_out_date = String.valueOf(date1.GetDate());
-//        System.out.println(check_out_date);
-        check_out_date.SetDate(month, day, year);
+        MyDate d = new MyDate(month,day,year);
+        check_out_date = d.GetMonth()+"/"+d.GetDay()+"/"+d.GetYear();
     }
+
+
     //public String getCheck_out_date()
-    public MyDate getCheck_out_date()
+    public String GetCheck_out_date()
     {
         return check_out_date;
     }
 
-   public int setConfNUm(){
+   public void setConfNUm(){
        int min = 111111;
        confNum = (int) (Math.random()*(max- min +1)+ min);
-       return confNum;
    }
 
     public int getConfNum() {
@@ -123,7 +123,13 @@ public class MakeReservation
 
     public static void main(String[] args)
     {
-
+        MakeReservation r = new MakeReservation("Raunip","Patel","28555 Boyds Chaple Rd,",35620,"CASH");
+        r.setConfNUm();
+        r.setCheck_in_date(12, 2,2022);
+        r.setCheck_out_date(12, 4,2022);
+        System.out.println(r.getConfNum());
+        System.out.println(r.getCheck_in_date());
+        System.out.println(r.GetCheck_out_date());
     }
 
 }
