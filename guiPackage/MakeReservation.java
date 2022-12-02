@@ -25,7 +25,7 @@ import java.awt.event.ActionListener;
         JFrame frame = new JFrame("Make Reservation Submenu");
 
         JPanel panel = new JPanel();
-        frame.setSize(350,270); //window size
+        frame.setSize(350,310); //window size
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(panel);
 
@@ -49,7 +49,7 @@ import java.awt.event.ActionListener;
         panel.add(lnameText);
 
         JLabel checkDatelabel = new JLabel("Check In Date");
-        checkDatelabel.setBounds(10,70,170,40);
+        checkDatelabel.setBounds(10,80,170,40);
         panel.add(checkDatelabel);
 
 
@@ -57,35 +57,44 @@ import java.awt.event.ActionListener;
         checkDateText.setBounds(170, 80, 140, 25);
         panel.add(checkDateText);
 
+        JLabel checkOutDatelabel = new JLabel("Check In Date");
+        checkOutDatelabel.setBounds(10,110,190,40);
+        panel.add(checkOutDatelabel);
+
+
+        JTextField checkOutDateText = new JTextField();
+        checkOutDateText.setBounds(170, 110, 140, 25);
+        panel.add(checkOutDateText);
+
 
         JLabel roomlabel = new JLabel("Room Type");
-        roomlabel.setBounds(10,110,190,25);
+        roomlabel.setBounds(10,140,210,25);
         panel.add(roomlabel);
 
 
 
         JTextField roomText = new JTextField();
-        roomText.setBounds(170,110,140,25);
+        roomText.setBounds(170,140,140,25);
         panel.add(roomText);
 
         JLabel roomRatelabel = new JLabel("Room Rate");
-        roomRatelabel.setBounds(10,140,210,25);
+        roomRatelabel.setBounds(10,170,210,25);
         panel.add(roomRatelabel);
 
         JTextField roomRateText = new JTextField();
-        roomRateText.setBounds(170,140,140,25);
+        roomRateText.setBounds(170,170,140,25);
         panel.add(roomRateText);
 
         JLabel paymentlabel = new JLabel("Payment Method");
-        paymentlabel.setBounds(10,170,240,25);
+        paymentlabel.setBounds(10,200,240,25);
         panel.add(paymentlabel);
 
         JTextField paymentText = new JTextField();
-        paymentText.setBounds(170,170,140,25);
+        paymentText.setBounds(170,200,140,25);
         panel.add(paymentText);
 
         JButton button = new JButton("Back");
-        button.setBounds(10,200,80,25);
+        button.setBounds(10,240,80,25);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -95,7 +104,7 @@ import java.awt.event.ActionListener;
         panel.add(button);
 
         button = new JButton("Reserve");
-        button.setBounds(240,200,80,25);
+        button.setBounds(240,240,80,25);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -112,6 +121,12 @@ import java.awt.event.ActionListener;
         frame.setVisible(true);
     }
 
+    public static void  main(String[] args) {
+
+
+        new MakeReservation();
+
+    }
 
 
 }
