@@ -7,7 +7,7 @@ public class ModifyReservation extends MakeReservation
 {
 
     /**
-     * Modifies the customer info
+     * Modifies the customer information
      * @param firstname first name of customer
      * @param lastname  last name  of customer
      * @param address   address of customer

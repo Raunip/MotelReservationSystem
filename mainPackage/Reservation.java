@@ -1,5 +1,8 @@
 package mainPackage;// insert package name here
 
+/**
+ *
+ */
 public class Reservation
 {
     static String firstname;
@@ -11,6 +14,9 @@ public class Reservation
     static String check_out_date;
     static Integer confirmation_num;
 
+    /**
+     *
+     */
     public Reservation() {
 
     }

@@ -8,7 +8,10 @@ public class ReservationManager
 
     private LinkedList<Object> reservation_info = new LinkedList<>();
 
-
+    /**
+     *
+     * @param makeReservation
+     */
     public void setReservation_info(MakeReservation makeReservation) {
         Reservation r = new Reservation();
         reservation_info.add(r.getFirstname());

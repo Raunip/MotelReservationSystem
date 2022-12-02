@@ -1,11 +1,26 @@
 package mainPackage;
 
-import java.util.Date;
-import java.util.GregorianCalendar;
+/**
+ *
+ */
 
 public class MakeReservation extends Reservation {
 
-
+    /**
+     *
+     * @param firstname
+     * @param lastname
+     * @param address
+     * @param zipcode
+     * @param payment
+     * @param month
+     * @param day
+     * @param year
+     * @param checkout_month
+     * @param checkout_day
+     * @param checkout_year
+     * @param wantConfNum
+     */
     public MakeReservation(String firstname, String lastname, String address, Integer zipcode, String payment, int month, int day, int year, int checkout_month, int checkout_day, int checkout_year, Boolean wantConfNum) {
         super.firstname = firstname;
         super.lastname = lastname;
