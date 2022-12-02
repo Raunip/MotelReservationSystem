@@ -50,6 +50,13 @@ public class ReservationSubMenuGui {
         frame.getContentPane().setBackground(new Color(0,119,200));
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        back_button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+            }
+        });
     }
 
     public void setVisible(boolean visible) {

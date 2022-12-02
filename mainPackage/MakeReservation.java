@@ -1,5 +1,7 @@
 package mainPackage;
 
+import java.util.GregorianCalendar;
+
 public class MakeReservation
 {
     String firstname;
@@ -7,8 +9,10 @@ public class MakeReservation
     String address;
     Integer zipcode;
     String payment;
-    String check_in_date;
-    String check_out_date;
+    //String check_in_date;
+    GregorianCalendar check_in_date;
+    //String check_out_date;
+    GregorianCalendar check_out_date;
     private boolean confAvailability;
     private static final int max = 999999;
 
@@ -79,24 +83,29 @@ public class MakeReservation
 
 
 
-    public void setCheck_in_date(int month, int day, int year) {
-
-
-
+    public void setCheck_in_date(int month, int day, int year)
+    {
+        check_in_date.set(year, month, day);
     }
 
-    public String getCheck_in_date() {
+    //public String getCheck_in_date()
+    public GregorianCalendar getCheck_in_date()
+    {
         return check_in_date;
     }
 
 
 
-   /* public void setCheck_out_date(int month,int day,int year) {
-        MyDate date1 = new MyDate(month,day,year);
-        check_out_date = String.valueOf(date1.GetDate());
-        System.out.println(check_out_date);
-    }*/
-    public String getCheck_out_date() {
+    public void setCheck_out_date(int month,int day,int year)
+    {
+//        MyDate date1 = new MyDate(month,day,year);
+//        check_out_date = String.valueOf(date1.GetDate());
+//        System.out.println(check_out_date);
+        check_out_date.set(year, month, day);
+    }
+    //public String getCheck_out_date()
+    public GregorianCalendar getCheck_out_date()
+    {
         return check_out_date;
     }
 
