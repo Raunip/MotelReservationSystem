@@ -10,8 +10,8 @@ public class MakeReservation extends Reservation {
      *
      * @param firstname
      * @param lastname
-     * @param address
-     * @param zipcode
+     * @param room_type
+     * @param room_rate
      * @param payment
      * @param month
      * @param day
@@ -21,11 +21,11 @@ public class MakeReservation extends Reservation {
      * @param checkout_year
      * @param wantConfNum
      */
-    public MakeReservation(String firstname, String lastname, String address, Integer zipcode, String payment, int month, int day, int year, int checkout_month, int checkout_day, int checkout_year, Boolean wantConfNum) {
+    public MakeReservation(String firstname, String lastname, String room_type, Integer room_rate, String payment, int month, int day, int year, int checkout_month, int checkout_day, int checkout_year, Boolean wantConfNum) {
         super.firstname = firstname;
         super.lastname = lastname;
-        super.address = address;
-        super.zipcode = zipcode;
+        super.room_type = room_type;
+        super.room_rate = room_rate;
         super.payment = payment;
         MyDate date1 = new MyDate(month, day, year);
         super.check_in_date = date1.GetMonth() + "/" + date1.GetDay() + "/" + date1.GetYear();
@@ -54,16 +54,16 @@ public class MakeReservation extends Reservation {
     }
 
 
-    public void setAddress(String str2) {
+    public void setRoomType(String str2) {
         Reservation r = new Reservation();
-        r.address = str2;
+        r.room_type = str2;
         //super.address = address;
     }
 
 
-    public void setZipcode(Integer int1) {
+    public void setRoomRate(Integer int1) {
         Reservation r = new Reservation();
-        r.zipcode = int1;
+        r.room_rate = int1;
         //super.zipcode = zipcode;
     }
 

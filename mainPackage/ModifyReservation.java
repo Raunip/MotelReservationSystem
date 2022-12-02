@@ -38,20 +38,20 @@ public class ModifyReservation extends MakeReservation
 
     /**
      *changes the address
-     * @param address address of customer
+     * @param room_type room type of customer
      */
     @Override
-    public void setAddress(String address) {
-        super.setAddress(address);
+    public void setRoomType(String room_type) {
+        super.setRoomType(room_type);
     }
 
     /**
      * changes the zipcode
-     * @param zipcode zip code of customer
+     * @param room_rate room rate of customer
      */
     @Override
-    public void setZipcode(Integer zipcode) {
-        super.setZipcode(zipcode);
+    public void setRoomRate(Integer room_rate) {
+        super.setRoomRate(room_rate);
     }
 
     /**

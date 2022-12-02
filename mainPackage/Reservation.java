@@ -7,8 +7,8 @@ public class Reservation
 {
     static String firstname;
     static String lastname;
-    static String address;
-    static Integer zipcode;
+    static String room_type;
+    static Integer room_rate;
     static String payment;
     static String check_in_date;
     static String check_out_date;
@@ -30,11 +30,11 @@ public class Reservation
     }
 
     public static String getAddress() {
-        return address;
+        return room_type;
     }
 
     public static Integer getZipcode() {
-        return zipcode;
+        return room_rate;
     }
 
     public static String getPayment() {
