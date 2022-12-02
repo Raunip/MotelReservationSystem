@@ -84,9 +84,9 @@ import java.awt.event.ActionListener;
         checkDaylabel.setBounds(10,200,190,40);
             panel.add(checkDaylabel);
 
-        JTextField checkOutDateText = new JTextField();
-        checkOutDateText.setBounds(170, 200, 140, 25);
-        panel.add(checkOutDateText);
+        JTextField checkDateText = new JTextField();
+        checkDateText.setBounds(170, 200, 140, 25);
+        panel.add(checkDateText);
 
         JLabel checkYearlabel = new JLabel("Check In Year");
         checkYearlabel.setBounds(10,230,190,40);
