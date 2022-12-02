@@ -7,25 +7,16 @@ import java.awt.event.ActionListener;
 
 
 
-/*//////
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author sarakhouri
- */
- public class MakeReservation extends JFrame
+public class FindReservationSubMenu extends JFrame
 {
 
 
-    public MakeReservation()
+    public FindReservationSubMenu()
     {
-        JFrame frame = new JFrame("Make Reservation Submenu");
+        JFrame frame = new JFrame("Find Reservation Submenu");
 
         JPanel panel = new JPanel();
-        frame.setSize(350,270); //window size
+        frame.setSize(340,350); //window size
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(panel);
 
@@ -57,61 +48,69 @@ import java.awt.event.ActionListener;
         checkDateText.setBounds(170, 80, 140, 25);
         panel.add(checkDateText);
 
+        JLabel checkOutDatelabel = new JLabel("Check Out Date");
+        checkOutDatelabel.setBounds(10,110,190,25);
+        panel.add(checkOutDatelabel);
+
+
+        JTextField checkOutDateText = new JTextField();
+        checkOutDateText.setBounds(170, 110, 140, 25);
+        panel.add(checkOutDateText);
 
         JLabel roomlabel = new JLabel("Room Type");
-        roomlabel.setBounds(10,110,190,25);
+        roomlabel.setBounds(10,140,210,25);
         panel.add(roomlabel);
 
 
-
         JTextField roomText = new JTextField();
-        roomText.setBounds(170,110,140,25);
+        roomText.setBounds(170,140,140,25);
         panel.add(roomText);
 
         JLabel roomRatelabel = new JLabel("Room Rate");
-        roomRatelabel.setBounds(10,140,210,25);
+        roomRatelabel.setBounds(10,170,240,25);
         panel.add(roomRatelabel);
 
         JTextField roomRateText = new JTextField();
-        roomRateText.setBounds(170,140,140,25);
+        roomRateText.setBounds(170,170,140,25);
         panel.add(roomRateText);
 
         JLabel paymentlabel = new JLabel("Payment Method");
-        paymentlabel.setBounds(10,170,240,25);
+        paymentlabel.setBounds(10,200,270,25);
         panel.add(paymentlabel);
 
         JTextField paymentText = new JTextField();
-        paymentText.setBounds(170,170,140,25);
+        paymentText.setBounds(170,200,140,25);
         panel.add(paymentText);
 
         JButton button = new JButton("Back");
-        button.setBounds(10,200,80,25);
+        button.setBounds(10,290,80,25);
+        panel.add(button);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
             }
         });
-        panel.add(button);
+       // panel.add(button);
 
-        button = new JButton("Reserve");
-        button.setBounds(240,200,80,25);
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame fr = new JFrame();
-                fr.setSize(100,100);
-                JPanel pnl = new JPanel();
-                JLabel lbl = new JLabel("Reservation Successful.");
-                pnl.add(lbl);
-            }
-        });
-        panel.add(button);
+        JButton button1 = new JButton("Modify Reservation");
+        button1.setBounds(80,230,150,25);
+        panel.add(button1);
+
+        JButton button2 = new JButton("Cancel Reservation");
+        button2.setBounds(80,260,150,25);
+        panel.add(button2);
 
         panel.setBackground(new Color(0, 119, 200));
         frame.setVisible(true);
     }
 
+    public static void  main(String[] args) {
+
+
+        new FindReservationSubMenu();
+
+    }
 
 
 }

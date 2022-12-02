@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class MainMenuGui extends JFrame implements ActionListener {
 
@@ -11,6 +13,13 @@ public class MainMenuGui extends JFrame implements ActionListener {
     private static final String avail_rooms = "Find Available Rooms";
     private static final String check_in = "Check In";
     private static final String check_out = "Check Out";
+
+    private static final String find_submenu = "Find Reservation SubMenu";
+
+    private final SimpleDateFormat dt = new SimpleDateFormat("MM/dd/yyyy");
+
+    Calendar inDate = Calendar.getInstance();
+    Calendar outDate= Calendar.getInstance();
     static JFrame main_menu_frame;
 
 
@@ -60,8 +69,9 @@ public class MainMenuGui extends JFrame implements ActionListener {
         main_menu_frame.getContentPane().setBackground(new Color(0, 119, 200));
         main_menu_frame.setVisible(true);
 
-
     }
+
+
     public void actionPerformed(ActionEvent e)
     {
         if(e.getActionCommand().equals("Reservation")){

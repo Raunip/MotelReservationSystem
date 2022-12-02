@@ -19,7 +19,7 @@ public class FindReservation extends JFrame
 
     public FindReservation()
     {
-     frame.setSize(350,200);
+     frame.setSize(350,160);
      //frame.getContentPane().setBackground(new Color(0, 119, 200));
      frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
      JPanel panel = new JPanel();
@@ -55,7 +55,15 @@ public class FindReservation extends JFrame
      find_button = new JButton("Find");
      find_button.setBounds(190,80,80,25);
      panel.add(find_button);
+     find_button.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+             frame.setVisible(false);
+             new FindReservationSubMenu().setVisible(true);
+         }
+     });
      frame.add(panel);
+
 
       //RGB code for background
 

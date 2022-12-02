@@ -76,6 +76,10 @@ public class CheckIn extends JFrame implements ActionListener
         frame.setVisible(true);
     }
 
+    public static String getText() {
+        return null;
+    }
+
 
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet.");

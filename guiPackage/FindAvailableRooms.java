@@ -7,12 +7,7 @@ import java.awt.event.ActionListener;
 
 
 
-/**
- *
- * @author sarakhouri
- */
 public  class FindAvailableRooms extends JFrame {
-
 
 
     public  FindAvailableRooms()
@@ -80,6 +75,8 @@ public  class FindAvailableRooms extends JFrame {
 
         panel.setBackground(new Color(0, 119, 200)); //RGB code for background
         frame.setVisible(true);
+
+
 
     }
 

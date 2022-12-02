@@ -81,6 +81,11 @@ public class CheckOut extends JFrame implements ActionListener {
 
     }
 
+    public static String getText() {
+
+        return null;
+    }
+
 
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet.");

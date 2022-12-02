@@ -8,12 +8,10 @@ import java.awt.event.ActionListener;
 
 public class ModifyReservationGui implements ActionListener {
 
-/**
+    /**
  *
  * @author Raunip Patel
  */
-
-
 
     public static void main(String[] args)
     {
@@ -25,6 +23,7 @@ public class ModifyReservationGui implements ActionListener {
         frame.add(panel);
 
         panel.setLayout(null);
+
 
         JLabel first_name_label = new JLabel("First Name");
         first_name_label.setBounds(10,20,80,25);
@@ -93,14 +92,13 @@ public class ModifyReservationGui implements ActionListener {
         button.setBounds(240,240,80,25);
         panel.add(button);
 
-        JButton button1 = new JButton("Calendar");
-        button1.setBounds(310,80,25,30);
-        panel.add(button1);
+       // JButton button1 = new JButton("Calendar");
+       // button1.setBounds(310,80,25,30);
+        //panel.add(button1);
 
         panel.setBackground(new Color(0, 119, 200));
         frame.setVisible(true);
     }
-
 
 
 
