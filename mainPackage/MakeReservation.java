@@ -28,6 +28,8 @@ public class MakeReservation
         this.payment = payment;
         //this.check_in_date = check_in_date;
         //this.check_out_date = check_out_date;
+        check_in_date = new GregorianCalendar();
+        check_out_date = new GregorianCalendar();
     }
 
 
@@ -119,6 +121,13 @@ public class MakeReservation
         return confNum;
     }
 
+    public static void main(String[] args)
+    {
+        MakeReservation r = new MakeReservation("Raunip","Patel","28555 Boyds Chaple Rd,",35620,"CASH");
+        r.setConfNUm();
+        r.setCheck_out_date(12,02,2022);
 
+        r.getCheck_out_date();
+    }
 
 }
