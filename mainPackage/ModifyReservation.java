@@ -14,8 +14,8 @@ public class ModifyReservation extends MakeReservation
      * @param zipcode    zip code of customer
      * @param payment   payment method of customer
      */
-    public ModifyReservation(String firstname, String lastname, String address, Integer zipcode, String payment) {
-        super(firstname, lastname, address, zipcode, payment);
+    public ModifyReservation(String firstname, String lastname, String address, Integer zipcode, String payment,int month,int day,int year,int checkout_month,int checkout_day,int checkout_year,Boolean wantConfNum) {
+        super(firstname, lastname, address, zipcode, payment,month, day, year, checkout_month,checkout_day,checkout_year,wantConfNum);
     }
 
     /**
@@ -72,6 +72,8 @@ public class ModifyReservation extends MakeReservation
     @Override
     public void setCheck_in_date(int month, int day, int year) {
         super.setCheck_in_date(month, day, year);
+        MyDate d = new MyDate(month,day,year);
+        check_in_date = d.GetMonth()+"/"+d.GetDay()+"/"+d.GetYear();
     }
 
     /**

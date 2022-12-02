@@ -3,133 +3,83 @@ package mainPackage;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class MakeReservation
-{
-    String firstname;
-    String lastname;
-    String address;
-    Integer zipcode;
-    String payment;
-    String check_in_date;
-    //GregorianCalendar check_in_date;
-    String check_out_date;
-   // GregorianCalendar check_out_date;
-    private boolean confAvailability;
-    private static final int max = 999999;
+public class MakeReservation extends Reservation {
 
 
+    public MakeReservation(String firstname, String lastname, String address, Integer zipcode, String payment, int month, int day, int year, int checkout_month, int checkout_day, int checkout_year, Boolean wantConfNum) {
+        super.firstname = firstname;
+        super.lastname = lastname;
+        super.address = address;
+        super.zipcode = zipcode;
+        super.payment = payment;
+        MyDate date1 = new MyDate(month, day, year);
+        super.check_in_date = date1.GetMonth() + "/" + date1.GetDay() + "/" + date1.GetYear();
+        MyDate date2 = new MyDate(checkout_month, checkout_day, checkout_year);
+        super.check_out_date = date2.GetMonth() + "/" + date2.GetDay() + "/" + date2.GetYear();
+        if (wantConfNum == true){
+            int min = 111111;
+            int max = 999999;
+            super.confirmation_num = (int) (Math.random() * (max - min + 1) + min);
+        }
 
-     static int confNum;
-
-    public MakeReservation(String firstname, String lastname, String address, Integer zipcode, String payment) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.address = address;
-        this.zipcode = zipcode;
-        this.payment = payment;
-        //this.check_in_date = check_in_date;
-        //this.check_out_date = check_out_date;
 
     }
 
 
-    public void createReservation(/* insert necessary variables*/)
-    {
-        // call appropriate methods or constructors
+    public void setFirstname(String str) {
+        Reservation r = new Reservation();
+        r.firstname = str;
+        //super.firstname = firstname;
     }
 
-    public void setConfNum(int num)
-    {
-        confNum = num;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Integer getZipcode() {
-        return zipcode;
-    }
-
-    public void setZipcode(Integer zipcode) {
-        this.zipcode = zipcode;
-    }
-
-    public String getPayment() {
-        return payment;
-    }
-
-    public void setPayment(String payment) {
-        this.payment = payment;
+    public void setLastname(String str1) {
+        Reservation r = new Reservation();
+        r.firstname = str1;
+        //super.lastname = lastname;
     }
 
 
-
-    public void setCheck_in_date(int month, int day, int year)
-    {
-        MyDate d = new MyDate(month,day,year);
-        check_in_date = d.GetMonth()+"/"+d.GetDay()+"/"+d.GetYear();
-    }
-
-    //public String getCheck_in_date()
-    public  String getCheck_in_date()
-    {
-      return check_in_date;
+    public void setAddress(String str2) {
+        Reservation r = new Reservation();
+        r.address = str2;
+        //super.address = address;
     }
 
 
-
-    public void setCheck_out_date(int month,int day,int year)
-    {
-        MyDate d = new MyDate(month,day,year);
-        check_out_date = d.GetMonth()+"/"+d.GetDay()+"/"+d.GetYear();
+    public void setZipcode(Integer int1) {
+        Reservation r = new Reservation();
+        r.zipcode = int1;
+        //super.zipcode = zipcode;
     }
 
 
-    //public String getCheck_out_date()
-    public String GetCheck_out_date()
-    {
-        return check_out_date;
+    public void setPayment(String str3) {
+        Reservation r = new Reservation();
+        r.payment = str3;
+        //super.payment = payment;
     }
 
-   public void setConfNUm(){
-       int min = 111111;
-       confNum = (int) (Math.random()*(max- min +1)+ min);
-   }
 
-    public int getConfNum() {
-        return confNum;
+    public void setCheck_in_date(int month, int day, int year) {
+        MyDate d = new MyDate(month, day, year);
+        Reservation r = new Reservation();
+        r.check_in_date = d.GetMonth() + "/" + d.GetDay() + "/" + d.GetYear();
     }
 
-    public static void main(String[] args)
-    {
-        MakeReservation r = new MakeReservation("Raunip","Patel","28555 Boyds Chaple Rd,",35620,"CASH");
-        r.setConfNUm();
-        r.setCheck_in_date(12, 2,2022);
-        r.setCheck_out_date(12, 4,2022);
-        System.out.println(r.getConfNum());
-        System.out.println(r.getCheck_in_date());
-        System.out.println(r.GetCheck_out_date());
+
+    public void setCheck_out_date(int month, int day, int year) {
+        MyDate d1 = new MyDate(month, day, year);
+        Reservation r = new Reservation();
+        r.check_out_date = d1.GetMonth() + "/" + d1.GetDay() + "/" + d1.GetYear();
     }
+
+    public void setConformationNum() {
+        int min = 111111;
+        int max = 999999;
+        Reservation r = new Reservation();
+        r.confirmation_num = (int) (Math.random() * (max - min + 1) + min);
+    }
+
+
 
 }

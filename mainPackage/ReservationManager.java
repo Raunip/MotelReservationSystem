@@ -1,26 +1,31 @@
-package mainPackage;// insert package name here
+package mainPackage;
+
+import java.util.LinkedList;
 
 public class ReservationManager
 {
-    private boolean confOperation;
 
-    public ReservationManager(/* insert variables */)
-    {
+
+    private LinkedList<Object> reservation_info = new LinkedList<>();
+
+
+    public void setReservation_info(MakeReservation makeReservation) {
+        Reservation r = new Reservation();
+        reservation_info.add(r.getFirstname());
+        reservation_info.add(r.getLastname());
+        reservation_info.add(r.getAddress());
+        reservation_info.add(r.getZipcode());
+        reservation_info.add(r.getPayment());
+        reservation_info.add(r.getCheck_in_date());
+        reservation_info.add(r.getCheck_out_date());
+        reservation_info.add(r.getConfirmation_num());
+
+
 
     }
 
-    public void addReservation(/* insert variables */)
-    {
-        // call method createReservation()?
-    }
 
-    public void removeReservation(/* insert variables */)
-    {
-        // call method removeReservation()?
-    }
-
-    public void lookReservation(/* insert variables */)
-    {
-        // call method searchReservation()?
+    public LinkedList<Object> getReservation_info() {
+        return reservation_info;
     }
 }
