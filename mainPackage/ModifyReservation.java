@@ -1,4 +1,4 @@
-// insert package name here
+package mainPackage;// insert package name here
 
 public class ModifyReservation
 {

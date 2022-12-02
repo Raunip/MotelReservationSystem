@@ -1,6 +1,6 @@
-import javax.xml.crypto.Data;
+package mainPackage;
 
-// insert package name here
+import javax.xml.crypto.Data;
 
 public class DataManager
 {
