@@ -54,4 +54,12 @@ public class CustomerInfo
     {
         paymentType = type;
     }
+
+    @Override
+    public String toString() {
+        return (this.getFirstName() +
+                ", "+this.getLastName() +
+                ", "+ this.getAddress() +
+                ", "+ this.getPaymentType());
+    }
 }
