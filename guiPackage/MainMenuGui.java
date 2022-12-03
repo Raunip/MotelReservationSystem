@@ -7,6 +7,9 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+/**
+ * Creates a new window for the main menu with the appropriate buttons to select an option.
+ */
 public class MainMenuGui extends JFrame implements ActionListener {
 
     private static final String reservation = "Reservation";
@@ -22,7 +25,9 @@ public class MainMenuGui extends JFrame implements ActionListener {
     Calendar outDate= Calendar.getInstance();
     static JFrame main_menu_frame;
 
-
+    /**
+     * Adds a button to access the reservation submenu.
+     */
     public void addResButton(){
 
         JButton res_button = new JButton(reservation);
@@ -31,6 +36,9 @@ public class MainMenuGui extends JFrame implements ActionListener {
         res_button.addActionListener(this);
     }
 
+    /**
+     * Adds a button to select the option to find available rooms.
+     */
     public void addFindRoomsButton(){
         JButton find_roomsButton = new JButton(avail_rooms);
         find_roomsButton.setBounds(90,100,150,40);
@@ -38,6 +46,9 @@ public class MainMenuGui extends JFrame implements ActionListener {
         find_roomsButton.addActionListener(this);
     }
 
+    /**
+     * Adds a button for the option to check in a customer.
+     */
     public void addCheckInButton()
     {
         JButton check_inButton = new JButton(check_in);
@@ -46,7 +57,9 @@ public class MainMenuGui extends JFrame implements ActionListener {
         check_inButton.addActionListener(this);
     }
 
-
+    /**
+     * Adds a button for the option to check out a customer.
+     */
     public void addCheckOutButton()
     {
         JButton check_outButton = new JButton(check_out);
@@ -71,7 +84,10 @@ public class MainMenuGui extends JFrame implements ActionListener {
 
     }
 
-
+    /**
+     * Calls the appropriate constructors depending on what button is pressed.
+     * @param e the event to be processed
+     */
     public void actionPerformed(ActionEvent e)
     {
         if(e.getActionCommand().equals("Reservation")){
@@ -89,9 +105,5 @@ public class MainMenuGui extends JFrame implements ActionListener {
              new CheckOut().setVisible(true);
         }
     }
-
-
-
-
 }
 
