@@ -5,11 +5,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
+/**
+ * Creates a new window with the appropriate labels and text boxes to modify an existing reservation.
+ */
 public class ModifyReservationGui implements ActionListener {
 
     /**
- *
+ * Main class with the code to create the window.
  * @author Raunip Patel
  */
 

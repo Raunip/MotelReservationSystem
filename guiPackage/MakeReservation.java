@@ -16,13 +16,15 @@ import java.nio.file.Paths;
  */
 
 /**
- *
+ * Creates a new window with the appropriate text boxes and labels to make a new reservation.
  * @author sarakhouri
  */
  public class MakeReservation extends JFrame
 {
 
-
+    /**
+     * Constructor for MakeReservation class. No parameters.
+     */
     public MakeReservation()
     {
         JFrame frame = new JFrame("Make Reservation Submenu");
@@ -185,6 +187,10 @@ import java.nio.file.Paths;
         frame.setVisible(true);
     }
 
+    /**
+     * Tester class to test the gui for making a reservation.
+     * @param args
+     */
     public static void  main(String[] args) {
 
 

@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Creates a new window with the buttons to make or find a reservation.
+ */
 public class ReservationSubMenuGui {
     private static final String make_res = "Make Reservation";
     private static final String find_res = "Find Reservation";
@@ -13,6 +16,9 @@ public class ReservationSubMenuGui {
 
     public boolean visible;
 
+    /**
+     * Constructor for the ReservationSubMenuGui class. No parameters.
+     */
     public ReservationSubMenuGui (){
         JFrame frame = new JFrame("Reservation Sub Menu");
         frame.setSize(350, 250);
