@@ -1,10 +1,12 @@
 package guiPackage;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import mainPackage.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.nio.file.Paths;
 
 
 
@@ -155,6 +157,15 @@ import java.awt.event.ActionListener;
                 ReservationManager reservationManager = new ReservationManager();
                 reservationManager.setReservation_info(makeReservation );
 
+                try {
+
+                    ObjectMapper mapper = new ObjectMapper();
+
+                    mapper.writerWithDefaultPrettyPrinter().writeValue(Paths.get("GuestList.json").toFile(), reservationManager.getReservation_info());
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+        }
+                frame.setVisible(false);
                 JFrame fr = new JFrame();
                 fr.setSize(100,100);
                 JPanel pnl = new JPanel();
