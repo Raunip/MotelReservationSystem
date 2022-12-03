@@ -156,12 +156,13 @@ import java.nio.file.Paths;
                         Integer.valueOf(checkOutYearText.getText()),value);
                 ReservationManager reservationManager = new ReservationManager();
                 reservationManager.setReservation_info(makeReservation );
-
+                String filename = String.valueOf(makeReservation.getConfirmation_num());
+                String jsonfile = filename.concat(".json");
                 try {
 
                     ObjectMapper mapper = new ObjectMapper();
 
-                    mapper.writerWithDefaultPrettyPrinter().writeValue(Paths.get("GuestList.json").toFile(), reservationManager.getReservation_info());
+                    mapper.writerWithDefaultPrettyPrinter().writeValue(Paths.get(jsonfile).toFile(), reservationManager.getReservation_info());
                 } catch (Exception ex) {
                     ex.printStackTrace();
         }
