@@ -166,6 +166,8 @@ import java.nio.file.Paths;
                     ObjectMapper mapper = new ObjectMapper();
 
                     mapper.writerWithDefaultPrettyPrinter().writeValue(Paths.get(jsonfile).toFile(),customerInfo);
+                    JOptionPane.showMessageDialog(null,"Confirmation Number : "+makeReservation.getConfirmation_num(),"Success" ,JOptionPane.INFORMATION_MESSAGE);
+
                 } catch (Exception ex) {
                     ex.printStackTrace();
         }

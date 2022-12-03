@@ -122,6 +122,13 @@ public class FindReservationSubMenu extends JFrame
         JButton button1 = new JButton("Modify Reservation");
         button1.setBounds(80,230,150,25);
         panel.add(button1);
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+
+            }
+        });
 
         JButton button2 = new JButton("Cancel Reservation");
         button2.setBounds(80,260,150,25);
