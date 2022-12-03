@@ -26,7 +26,7 @@ public class LoginPage implements ActionListener {
 
         panel.setLayout(null);
 
-      userLabel = new JLabel("User");
+        userLabel = new JLabel("User");
         userLabel.setBounds(10,20,80,25);
         panel.add(userLabel);
 
@@ -34,20 +34,20 @@ public class LoginPage implements ActionListener {
         userText.setBounds(100,20,165,25);
         panel.add(userText);
 
-         passwordLabel = new JLabel("Password");
+        passwordLabel = new JLabel("Password");
         passwordLabel.setBounds(10,50,80,25);
         panel.add(passwordLabel);
 
-         passwordText = new JPasswordField();
+        passwordText = new JPasswordField();
         passwordText.setBounds(100,50,165,25);
         panel.add(passwordText);
 
-         button = new JButton("Login");
-        button.setBounds(10,80,80,25);
+        button = new JButton("Login");
+        button.setBounds(100,80,165,25);
         button.addActionListener( new LoginPage());
         panel.add(button);
 
-        
+
 
         success = new JLabel("");
         success.setBounds(10,110,300,25);
@@ -69,6 +69,7 @@ public class LoginPage implements ActionListener {
 
         if(user.equals("reservations") && password.equals("1234")) {
             success.setText("Login successful!");
+            button.setText("Open Main Menu");
             button.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -80,10 +81,9 @@ public class LoginPage implements ActionListener {
                 }
             });
         }
-            else{
-                success.setText("Incorrect user or password.");
-            }
-
+        else{
+            success.setText("Incorrect user or password. Try again.");
         }
-    }
 
+    }
+}
