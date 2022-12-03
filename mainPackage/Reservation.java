@@ -14,14 +14,15 @@ public class Reservation
     static String check_out_date;
     static Integer confirmation_num;
 
+    public Reservation() {
+    }
+
     /**
      *
      */
-    public Reservation() {
 
-    }
 
-    public static String getFirstname() {
+    public String getFirstname() {
         return firstname;
     }
 
@@ -29,11 +30,11 @@ public class Reservation
         return lastname;
     }
 
-    public static String getAddress() {
+    public static String getRoomType() {
         return room_type;
     }
 
-    public static Integer getZipcode() {
+    public static Integer getRoomRate() {
         return room_rate;
     }
 
@@ -52,6 +53,7 @@ public class Reservation
     public Integer getConfirmation_num() {
         return confirmation_num;
     }
+
 
 
 

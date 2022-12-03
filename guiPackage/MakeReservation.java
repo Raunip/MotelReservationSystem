@@ -157,12 +157,15 @@ import java.nio.file.Paths;
                 ReservationManager reservationManager = new ReservationManager();
                 reservationManager.setReservation_info(makeReservation );
                 String filename = String.valueOf(makeReservation.getConfirmation_num());
+                String checkin = checkMonthText.getText()+"/"+checkDateText.getText()+"/"+checkYearText.getText();
+                String checkout = checkOutMonthText.getText()+"/"+checkOutDayText.getText()+"/"+checkOutYearText.getText();
+                CustomerInfo customerInfo = new CustomerInfo(makeReservation.getFirstname(), lnameText.getText(),roomText.getText(),Integer.valueOf(roomRateText.getText()),paymentText.getText(),checkin,checkout,makeReservation.getConfirmation_num());
                 String jsonfile = filename.concat(".json");
                 try {
 
                     ObjectMapper mapper = new ObjectMapper();
 
-                    mapper.writerWithDefaultPrettyPrinter().writeValue(Paths.get(jsonfile).toFile(), reservationManager.getReservation_info());
+                    mapper.writerWithDefaultPrettyPrinter().writeValue(Paths.get(jsonfile).toFile(),customerInfo);
                 } catch (Exception ex) {
                     ex.printStackTrace();
         }

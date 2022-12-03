@@ -58,6 +58,20 @@ public class FindReservation extends JFrame
      find_button.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
+             String confirmation = new String(conf_num_texField.getText());
+             String filename = confirmation;
+             filename.concat(".json");
+             mainPackage.FindReservation findReservation = new mainPackage.FindReservation(filename);
+             findReservation.setFilenname(filename);
+             frame.setVisible(false);
+             new FindReservationSubMenu().setVisible(true);
+
+
+         }
+     });
+     find_button.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
              frame.setVisible(false);
              new FindReservationSubMenu().setVisible(true);
          }

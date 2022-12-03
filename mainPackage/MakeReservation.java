@@ -40,6 +40,10 @@ public class MakeReservation extends Reservation {
 
     }
 
+    public String getFirstname()
+    {
+        return super.firstname;
+    }
 
     public void setFirstname(String str) {
         Reservation r = new Reservation();
@@ -49,7 +53,7 @@ public class MakeReservation extends Reservation {
 
     public void setLastname(String str1) {
         Reservation r = new Reservation();
-        r.firstname = str1;
+        r.lastname = str1;
         //super.lastname = lastname;
     }
 

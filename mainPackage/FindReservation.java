@@ -2,16 +2,14 @@ package mainPackage;// insert package name here
 
 public class FindReservation
 {
-    int confirmationNum;
+    private String filenname;
 
-    public FindReservation(int num)
-    {
-        confirmationNum = num;
+    public FindReservation(String filenname) {
+        this.filenname = filenname;
     }
 
-    public int searchReservation(int confirmationNum)
-    {
-        // insert code here
-        return confirmationNum;
+
+    public void setFilenname(String filenname) {
+        this.filenname = filenname;
     }
 }

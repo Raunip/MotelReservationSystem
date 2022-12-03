@@ -16,8 +16,8 @@ public class ReservationManager
         Reservation r = new Reservation();
         reservation_info.add(r.getFirstname());
         reservation_info.add(r.getLastname());
-        reservation_info.add(r.getAddress());
-        reservation_info.add(r.getZipcode());
+        reservation_info.add(r.getRoomType());
+        reservation_info.add(r.getRoomRate());
         reservation_info.add(r.getPayment());
         reservation_info.add(r.getCheck_in_date());
         reservation_info.add(r.getCheck_out_date());
