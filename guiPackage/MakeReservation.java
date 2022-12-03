@@ -120,8 +120,16 @@ import java.awt.event.ActionListener;
         checkOutYearText.setBounds(170, 320, 140, 25);
         panel.add(checkOutYearText);
 
+        JLabel confirmlabel = new JLabel("Confirmation T/F ");
+        confirmlabel.setBounds(10,340,190,40);
+        panel.add(confirmlabel);
+
+        JTextField confirmText = new JTextField();
+        confirmText.setBounds(170, 350, 140, 25);
+        panel.add(confirmText);
+
         JButton button = new JButton("Back");
-        button.setBounds(10,370,80,25);
+        button.setBounds(10,380,80,25);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -131,7 +139,7 @@ import java.awt.event.ActionListener;
         panel.add(button);
 
         button = new JButton("Reserve");
-        button.setBounds(240,370,80,25);
+        button.setBounds(240,380,80,25);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
