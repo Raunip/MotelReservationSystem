@@ -1,4 +1,5 @@
 package guiPackage;
+import mainPackage.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -33,6 +34,7 @@ import java.awt.event.ActionListener;
 
         JLabel fnamelabel = new JLabel("First Name");
         fnamelabel.setBounds(10,20,80,25);
+
         panel.add(fnamelabel);
 
         //bounds ( x(left/right), y(up/down) , width , height )
@@ -143,6 +145,14 @@ import java.awt.event.ActionListener;
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                boolean value = Boolean.parseBoolean(confirmText.getText());
+                mainPackage.MakeReservation makeReservation = new mainPackage.MakeReservation(fnameText.getText(),
+                        lnameText.getText(),roomText.getText(),Integer.valueOf(roomRateText.getText()),paymentText.getText(),
+                        Integer.valueOf(checkMonthText.getText()),Integer.valueOf(checkDateText.getText()),
+                        Integer.valueOf(checkYearText.getText()),
+                        Integer.valueOf(checkOutMonthText.getText()),Integer.valueOf(checkOutDayText.getText()),
+                        Integer.valueOf(checkOutYearText.getText()),value);
+
                 JFrame fr = new JFrame();
                 fr.setSize(100,100);
                 JPanel pnl = new JPanel();
