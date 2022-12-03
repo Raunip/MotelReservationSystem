@@ -1,5 +1,5 @@
 package mainPackage;
-import guiPackage.*;
+import guiPackage.LoginPage;
 
 public class ReservationSystem
 {
