@@ -13,7 +13,7 @@ public class FindReservation
         this.filenname = filenname;
     }
 
-    public String getFilenname() {
+    public String getFilename() {
         return filenname;
     }
 }
