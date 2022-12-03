@@ -12,4 +12,8 @@ public class FindReservation
     public void setFilenname(String filenname) {
         this.filenname = filenname;
     }
+
+    public String getFilenname() {
+        return filenname;
+    }
 }
