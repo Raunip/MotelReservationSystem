@@ -19,7 +19,7 @@ public class ModifyReservationGui implements ActionListener {
 
         JPanel panel = new JPanel();
         frame.setSize(350,300); //window size
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.add(panel);
 
         panel.setLayout(null);

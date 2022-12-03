@@ -32,7 +32,7 @@ public class FindReservationSubMenu extends JFrame
 
         CustomerInfo customerInfo = new CustomerInfo();
         try {
-
+            // read the data from file
             ObjectMapper mapper = new ObjectMapper();
             customerInfo = mapper.readValue(Paths.get(filename).toFile(), CustomerInfo.class);
 
@@ -126,7 +126,24 @@ public class FindReservationSubMenu extends JFrame
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
+                CustomerInfo customerInfo1 = new CustomerInfo();
+                customerInfo1.setFirstname(fnameText.getText());
+                customerInfo1.setLastname(lnameText.getText());
+                customerInfo1.setRoomType(roomText.getText());
+                customerInfo1.setRoomRate(Integer.valueOf(roomRateText.getText()));
+                customerInfo1.setPayment_Type(paymentText.getText());
+                customerInfo1.setCheck_In_Date(checkDateText.getText());
+                customerInfo1.setCheck_Out_Date(checkOutDateText.getText());
+                int confNum =Integer.parseInt(filename.replaceAll("[^0-9]",""));
+                customerInfo1.setConfirmation_Number(confNum);
 
+                try{
+                    ObjectMapper mapper = new ObjectMapper();
+                    mapper.writerWithDefaultPrettyPrinter().writeValue(Paths.get(filename).toFile(),customerInfo1);
+                    JOptionPane.showMessageDialog(null,"Confirmation Number : "+confNum,"Successfully Modified" ,JOptionPane.INFORMATION_MESSAGE);
+                }catch(Exception e1){
+                    e1.printStackTrace();
+                }
             }
         });
 
@@ -145,6 +162,7 @@ public class FindReservationSubMenu extends JFrame
         panel.setBackground(new Color(0, 119, 200));
         frame.setVisible(true);
     }
+
 
 
 
