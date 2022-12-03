@@ -1,6 +1,7 @@
 package guiPackage;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import mainPackage.CancelReservation;
 import mainPackage.CustomerInfo;
 
 import javax.swing.*;
@@ -14,7 +15,7 @@ public class FindReservationSubMenu extends JFrame
 {
 
 
-    public FindReservationSubMenu()
+    public FindReservationSubMenu(String filename)
     {
         JFrame frame = new JFrame("Find Reservation Submenu");
 
@@ -33,19 +34,20 @@ public class FindReservationSubMenu extends JFrame
         try {
 
             ObjectMapper mapper = new ObjectMapper();
-            customerInfo = mapper.readValue(Paths.get("759314.json").toFile(), CustomerInfo.class);
+            customerInfo = mapper.readValue(Paths.get(filename).toFile(), CustomerInfo.class);
 
-
+            System.out.print(filename);
             System.out.println(customerInfo.toString());
 
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
+        System.out.print(customerInfo.getFirstname());
         //bounds ( x(left/right), y(up/down) , width , height )
         JTextField fnameText = new JTextField();
         fnameText.setBounds(170,20,140,25);
         panel.add(fnameText);
+        fnameText.setText(customerInfo.getFirstname());
 
         fnameText.setText(customerInfo.getFirstname());
 
@@ -56,6 +58,7 @@ public class FindReservationSubMenu extends JFrame
         JTextField lnameText = new JTextField();
         lnameText.setBounds(170,50,140,25);
         panel.add(lnameText);
+        lnameText.setText(customerInfo.getLastname());
 
         JLabel checkDatelabel = new JLabel("Check In Date");
         checkDatelabel.setBounds(10,70,170,40);
@@ -65,6 +68,7 @@ public class FindReservationSubMenu extends JFrame
         JTextField checkDateText = new JTextField();
         checkDateText.setBounds(170, 80, 140, 25);
         panel.add(checkDateText);
+        checkDateText.setText(customerInfo.getCheck_In_Date());
 
         JLabel checkOutDatelabel = new JLabel("Check Out Date");
         checkOutDatelabel.setBounds(10,110,190,25);
@@ -74,6 +78,7 @@ public class FindReservationSubMenu extends JFrame
         JTextField checkOutDateText = new JTextField();
         checkOutDateText.setBounds(170, 110, 140, 25);
         panel.add(checkOutDateText);
+        checkOutDateText.setText(customerInfo.getCheck_Out_Date());
 
         JLabel roomlabel = new JLabel("Room Type");
         roomlabel.setBounds(10,140,210,25);
@@ -82,6 +87,7 @@ public class FindReservationSubMenu extends JFrame
 
         JTextField roomText = new JTextField();
         roomText.setBounds(170,140,140,25);
+        roomText.setText(customerInfo.getRoomType());
         panel.add(roomText);
 
         JLabel roomRatelabel = new JLabel("Room Rate");
@@ -90,6 +96,7 @@ public class FindReservationSubMenu extends JFrame
 
         JTextField roomRateText = new JTextField();
         roomRateText.setBounds(170,170,140,25);
+        roomRateText.setText(String.valueOf(customerInfo.getRoomRate()));
         panel.add(roomRateText);
 
         JLabel paymentlabel = new JLabel("Payment Method");
@@ -99,6 +106,7 @@ public class FindReservationSubMenu extends JFrame
         JTextField paymentText = new JTextField();
         paymentText.setBounds(170,200,140,25);
         panel.add(paymentText);
+        paymentText.setText(customerInfo.getPayment_Type());
 
         JButton button = new JButton("Back");
         button.setBounds(10,290,80,25);
@@ -119,16 +127,12 @@ public class FindReservationSubMenu extends JFrame
         button2.setBounds(80,260,150,25);
         panel.add(button2);
 
+
         panel.setBackground(new Color(0, 119, 200));
         frame.setVisible(true);
     }
 
-    public static void  main(String[] args) {
 
-
-        new FindReservationSubMenu();
-
-    }
 
 
 }
