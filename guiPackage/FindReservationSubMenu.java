@@ -1,10 +1,13 @@
 package guiPackage;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import mainPackage.CustomerInfo;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.nio.file.Paths;
 
 
 public class FindReservationSubMenu extends JFrame
@@ -26,10 +29,25 @@ public class FindReservationSubMenu extends JFrame
         fnamelabel.setBounds(10,20,80,25);
         panel.add(fnamelabel);
 
+        CustomerInfo customerInfo = new CustomerInfo();
+        try {
+
+            ObjectMapper mapper = new ObjectMapper();
+            customerInfo = mapper.readValue(Paths.get("759314.json").toFile(), CustomerInfo.class);
+
+
+            System.out.println(customerInfo.toString());
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
         //bounds ( x(left/right), y(up/down) , width , height )
         JTextField fnameText = new JTextField();
         fnameText.setBounds(170,20,140,25);
         panel.add(fnameText);
+
+        fnameText.setText(customerInfo.getFirstname());
 
         JLabel lnamelabel = new JLabel("Last Name");
         lnamelabel.setBounds(10,50,150,25);

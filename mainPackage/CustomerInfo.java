@@ -11,6 +11,7 @@ public class CustomerInfo
     private String Check_Out_Date;
     private int Confirmation_Number;
 
+    public CustomerInfo(){};
     public CustomerInfo(String firstname, String lastname, String roomType, Integer roomRate, String paymentType, String check_In_Date, String check_Out_Date, Integer confirmation_Number) {
         Firstname = firstname;
         Lastname = lastname;
