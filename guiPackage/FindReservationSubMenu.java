@@ -127,6 +127,13 @@ public class FindReservationSubMenu extends JFrame
         button2.setBounds(80,260,150,25);
         panel.add(button2);
 
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                new CancelReservation(filename);
+                frame.setVisible(false);
+            }
+        });
 
         panel.setBackground(new Color(0, 119, 200));
         frame.setVisible(true);
