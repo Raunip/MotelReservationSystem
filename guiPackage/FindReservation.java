@@ -5,7 +5,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
+/**
+ * Creates a new window with the appropriate labels and buttons to find a reservation when the
+ * constructor is called.
+ */
 public class FindReservation extends JFrame
 {
     JLabel name_label;
@@ -16,7 +19,9 @@ public class FindReservation extends JFrame
    JButton find_button;
    JFrame frame = new JFrame("Find Reservation");
 
-
+    /**
+     * Constructor for FindReservation class. No parameters.
+     */
     public FindReservation()
     {
      frame.setSize(350,160);
@@ -80,6 +85,11 @@ public class FindReservation extends JFrame
 
 
     }
+
+    /**
+     * Main method used only to test the gui.
+     * @param args
+     */
     public static void  main(String[] args) {
 
 

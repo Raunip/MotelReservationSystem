@@ -6,10 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
+/**
+ * Creates a new window containing the appropriate labels and buttons to find an available room.
+ */
+public class FindAvailableRooms extends JFrame {
 
-public  class FindAvailableRooms extends JFrame {
-
-
+    /**
+     * Constructor for FindAvailableRooms class. No parameters.
+     */
     public  FindAvailableRooms()
         {
 

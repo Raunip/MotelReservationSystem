@@ -10,9 +10,14 @@ import java.awt.event.ActionListener;
  */
 //////
 
-
+/**
+ * Creates a new window containing the appropriate labels and text boxes to check out a customer.
+ */
 public class CheckOut extends JFrame implements ActionListener {
 
+    /**
+     * Constructor for checkout class. No parameters.
+     */
     public CheckOut() {
 
         //Title for window
@@ -81,12 +86,20 @@ public class CheckOut extends JFrame implements ActionListener {
 
     }
 
+    /**
+     * Returns the text associated with the object. Unused method.
+     * @return null
+     */
     public static String getText() {
 
         return null;
     }
 
-
+    /**
+     * Throws an exception with a message indicating if a given feature is not functional.
+     * This method can be overridden by the constructor.
+     * @param e the event to be processed
+     */
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet.");
     }

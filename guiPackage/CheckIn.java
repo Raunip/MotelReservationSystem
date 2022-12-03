@@ -10,12 +10,15 @@ import java.awt.event.ActionListener;
  */
 /////
 /**
- *
+ * Creates a new window containing the appropriate labels and buttons to check in a customer.
  * @author sarakhouri
  */
 public class CheckIn extends JFrame implements ActionListener
 {
 
+    /**
+     * Constructor for CheckIn class. No parameters.
+     */
     public CheckIn() {
 
         //Title for window
@@ -76,11 +79,20 @@ public class CheckIn extends JFrame implements ActionListener
         frame.setVisible(true);
     }
 
+    /**
+     * Returns the text associated with the object. Unused method.
+     * @return null
+     */
     public static String getText() {
         return null;
     }
 
 
+    /**
+     * Throws an exception with a message indicating if a given feature is not functional.
+     * This method can be overridden in the constructor.
+     * @param e the event to be processed
+     */
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet.");
     }

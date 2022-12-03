@@ -10,11 +10,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.nio.file.Paths;
 
-
+/**
+ * Creates a new window with the necessary labels and text boxes to find an existing reservation
+ * when the constructor is called.
+ */
 public class FindReservationSubMenu extends JFrame
 {
 
-
+    /**
+     * Constructor for FindReservationSubmenu class.
+     * @param filename Name of the file to search for.
+     */
     public FindReservationSubMenu(String filename)
     {
         JFrame frame = new JFrame("Find Reservation Submenu");

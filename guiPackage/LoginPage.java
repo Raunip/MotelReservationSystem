@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Creates a new window with the appropriate labels and text boxes to log in to the system.
+ */
 public class LoginPage implements ActionListener {
 
     private static JLabel userLabel;
@@ -13,6 +16,11 @@ public class LoginPage implements ActionListener {
     private static JPasswordField passwordText;
     private static JButton button;
     private static JLabel success;
+
+    /**
+     * Main class to run the project. The project should be run from this file.
+     * @param args
+     */
     public static void main(String[] args){
 
         JPanel panel = new JPanel();
