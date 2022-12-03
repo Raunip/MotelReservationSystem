@@ -1,14 +1,10 @@
-package mainPackage;// insert package name here
+package mainPackage;
+import guiPackage.*;
 
 public class ReservationSystem
 {
-    public ReservationSystem()
-    {
-        
-    }
-
-    public void initializeGUI()
-    {
-
+    public static void main (String[] args){
+       LoginPage lp = new LoginPage();
+       lp.runLogin();
     }
 }

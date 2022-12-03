@@ -19,9 +19,9 @@ public class LoginPage implements ActionListener {
 
     /**
      * Main class to run the project. The project should be run from this file.
-     * @param args
+     * @param
      */
-    public static void main(String[] args){
+    public void runLogin(){
 
         JPanel panel = new JPanel();
         JFrame frame = new JFrame("Motel Reservation System");
