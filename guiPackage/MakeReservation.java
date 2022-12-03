@@ -152,6 +152,8 @@ import java.awt.event.ActionListener;
                         Integer.valueOf(checkYearText.getText()),
                         Integer.valueOf(checkOutMonthText.getText()),Integer.valueOf(checkOutDayText.getText()),
                         Integer.valueOf(checkOutYearText.getText()),value);
+                ReservationManager reservationManager = new ReservationManager();
+                reservationManager.setReservation_info(makeReservation );
 
                 JFrame fr = new JFrame();
                 fr.setSize(100,100);
